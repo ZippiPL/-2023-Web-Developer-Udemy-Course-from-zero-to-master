@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const school = {
+            name: "Silesian University Of Technology",
+            city: "Gliwice",
+            listOfStudents:[],
+            addStudent : function(name,surname){
+                const student = {
+                name:name,
+                surname:surname
+            };
+                const index = this.listOfStudents.length  
+                this.listOfStudents[index] = student 
+            },
+            showStudents:function(){
+
+                if(this.listOfStudents.length == 0){
+                    console.log("No students")
+                       return
+                }  
+                 for(let i = 0 ; i < this.listOfStudents.length; i++){
+                            const s = this.listOfStudents[i]
+                            console.log(s.name,s.surname)
+                        }
+            },
+            showStudentsByName:function (name){
+                for(let i = 0 ; i < this.listOfStudents.length; i++){
+                    const s = this.listOfStudents[i]
+                    if(s.name === name) console.log(s.name,s.surname)
+                }
+            },
+            resetStudents:function(){
+                this.listOfStudents = []
+            }
+        }
+
+        school.addStudent("denis","duda")
+        school.addStudent("laura","duda")
+        school.addStudent("karol","kopka")
+        school.addStudent("krystian","olly")
+        console.log(school.listOfStudents)
+        school.showStudents()
+        school.showStudentsByName("karol")
+        school.resetStudents()
+        school.showStudents()
+
+    </script>
+</body>
+</html>

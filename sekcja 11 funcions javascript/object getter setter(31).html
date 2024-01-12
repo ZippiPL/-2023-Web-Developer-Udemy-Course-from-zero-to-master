@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const truck= {
+        _brand:null,
+        _model:null,
+        _topSpeed:0,
+        set topSpeed(newValue){
+            this._topSpeed = newValue;
+        },
+        get topSpeed(){
+            return this._topSpeed;
+        },
+        get brand(){
+            return this._brand;
+        },
+        get model(){
+            return this._model;
+        },
+        set brand(newValue){
+            this. _brand = newValue;
+        },
+        set model(newValue){
+            this. _model = newValue;
+        },
+    };
+        truck.model = 50
+        truck.brand = "shap"
+        truck.topSpeed = 30
+        console.log(truck.brand)
+        console.log(truck)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="new_article.php" method="post">
+        <p>
+            <label fpr="title">Article Title</label>
+            <input type="text" id="title" name="title">
+        </p>
+        <p>
+            <label>Description</label>
+            <br>
+            <textarea name="content" id="content" cols="50" rows="4"></textarea>
+        </p>
+        <p>
+            <label>Publication Date</label>
+            <input type="datetime-local" name="publication-date" id="publication-date">
+        </p>
+        <p>
+            
+            <input type="radio" name="type" id="news" value="news">
+            <label>News</label>
+            
+            <input type="radio" name="type" id="article" value="article">
+            
+            <label>Article</label>
+            <input type="radio" name="type" id="review" value="review" >
+            <label>Review</label>
+        </p>
+        <p>
+            <input type="checkbox" name="tag" id="trip" value="trip">
+            <label>Trip</label>
+            <input type="checkbox" name="tag" id="lifestyle" value="lifestyle">
+            <label>LifeStyle</label>
+        </p>
+        <p>
+            <label for="category">Category</label>
+            <select name="category" id="category1">
+            <option value="category1">Category</option>
+            <option value="category2">Category 2</option>
+            </select>
+        </p>
+        
+         <button type="reset">Reset</button>
+         <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

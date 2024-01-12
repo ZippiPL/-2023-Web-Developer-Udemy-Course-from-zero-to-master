@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createUser(name,contact){
+            let u1 = {
+                name:name,
+            }
+            if(typeof contact == "string") u1.email = contact
+            else if(typeof contact == "number") u1.telephone = contact
+            return u1
+        }
+        let user1 = createUser("Ola","ola@example.com")
+        let user2= createUser("Bartek",123123123)
+        console.log(user1)
+        console.log(user2)
+    </script>
+</body>
+</html>
